@@ -10,10 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Serializer
+NAME = IdentifyType
 SRC = main.cpp \
-		Serializer.cpp \
-		Data.cpp
+		Base.cpp \
+		A.cpp \
+		B.cpp \
+		C.cpp \
+		GenerateAndIdentify.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
