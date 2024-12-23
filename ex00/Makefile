@@ -14,7 +14,7 @@ NAME = ScalarConverter
 SRC = main.cpp \
 		ScalarConverter.cpp
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -Wfloat-equal -Wold-style-cast
 CC = c++
 
 all: $(NAME)

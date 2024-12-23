@@ -3,39 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuele <samuele@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 00:41:48 by samuele           #+#    #+#             */
-/*   Updated: 2024/12/22 23:23:31 by samuele          ###   ########.fr       */
+/*   Updated: 2024/12/23 19:09:15 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-#include <cmath>
-#include <iostream>
-#include <string>
-
-int main()
+int main(int argc, char **argv)
 {
-    ScalarConverter::convert("0");
-    std::cout << std::endl;
-    ScalarConverter::convert("42.0");
-    std::cout << std::endl;
-    ScalarConverter::convert("42.0f");
-    std::cout << std::endl;
-    ScalarConverter::convert("nanf");
-    std::cout << std::endl;
-    ScalarConverter::convert("inff");
-    std::cout << std::endl;
-    ScalarConverter::convert("-inff");
-    std::cout << std::endl;
-    ScalarConverter::convert("nan");
-    std::cout << std::endl;
-    ScalarConverter::convert("inf");
-    std::cout << std::endl;
-    ScalarConverter::convert("-inf");
-    std::cout << std::endl;
-
-    return 0;
+	if (argc != 2)
+	{
+		std::cout << "Usage: ./convert [value]" << std::endl;
+		return 1;
+	}
+	
+	ScalarConverter::convert(argv[1]);
+	
+	return 0;
 }
