@@ -6,7 +6,7 @@
 /*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 00:20:16 by samuele           #+#    #+#             */
-/*   Updated: 2024/12/23 19:11:42 by sdell-er         ###   ########.fr       */
+/*   Updated: 2024/12/23 19:28:42 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,19 @@ class ScalarConverter
 {
     private:
         ScalarConverter();
-        ScalarConverter(ScalarConverter const &obj);
-		static e_type getType(std::string const &value);
-		static bool checkInvalid(std::string const &value);
-		static int getPrecision(std::string const &value);
-		static void charConvert(std::string const &value);
-		static void numberConvert(std::string const &value);
-		static void pseudoConvert(std::string const &value);
+        ScalarConverter(const ScalarConverter &obj);
+		static e_type getType(const std::string &value);
+		static bool checkInvalid(const std::string &value);
+		static int getPrecision(const std::string &value);
+		static void charConvert(const std::string &value);
+		static void numberConvert(const std::string &value);
+		static void pseudoConvert(const std::string &value);
     
     public:
         ~ScalarConverter();
-        ScalarConverter &operator=(ScalarConverter const &obj);
+        ScalarConverter &operator=(const ScalarConverter &obj);
 
-        static void convert(std::string const &value);
+        static void convert(const std::string &value);
 };
 
 int stringToInt(const std::string &str);
