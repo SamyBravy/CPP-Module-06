@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuele <samuele@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sdell-er <sdell-er@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:39:11 by samuele           #+#    #+#             */
-/*   Updated: 2024/12/23 22:57:48 by samuele          ###   ########.fr       */
+/*   Updated: 2025/01/12 10:38:47 by sdell-er         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int main()
     std::cout << "NULL: " << std::endl;
     Base *base3 = NULL;
     identify(base3);
-    identify(*base3);
+    identify(base3);
     
     return 0;
 }
